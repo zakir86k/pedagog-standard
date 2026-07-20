@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Профессиональный стандарт «Педагог»: реализация и развитие учителя · Проект AP23489008</title>
-<meta name="description" content="Научно-исследовательский проект AP23489008 (2024–2026): исследование реализации профессионального стандарта «Педагог» в Казахстане и детализация его содержания для непрерывного профессионального развития учителей.">
+<title>Развитие профессионального стандарта педагога в Казахстане · Проект AP23489008</title>
+<meta name="description" content="Одно из направлений исследовательского проекта AP23489008 (2024–2026): сравнительный анализ развития профессионального стандарта педагога в Казахстане (2017 · 2022 · 2025) в сопоставлении с австралийским APST.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -117,6 +117,55 @@ footer{padding:34px 0 56px;}
 .team-email{color:var(--y2025); text-decoration:none; border-bottom:1px solid currentColor; font-size:15px;}
 .team-email:hover{opacity:.75;}
 .team .val{font-size:15px; color:var(--ink);}
+
+/* expandable info panels */
+details.xp{border:1px solid var(--hair); border-radius:var(--radius); background:var(--card); margin-top:20px; overflow:hidden;}
+details.xp>summary{cursor:pointer; list-style:none; padding:13px 18px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink); display:flex; align-items:center; justify-content:space-between; gap:12px;}
+details.xp>summary::-webkit-details-marker{display:none;}
+details.xp>summary::after{content:'+'; font-size:17px; line-height:1; color:var(--ink-soft);}
+details.xp[open]>summary::after{content:'\2013';}
+details.xp>summary:hover{background:#FDFCFA;}
+.xp-body{padding:2px 18px 16px; border-top:1px solid var(--hair);}
+.xp-item{padding:15px 0; border-top:1px solid #EEEBE3;}
+.xp-item:first-child{border-top:none;}
+.xp-item h4{font-family:'Newsreader',serif; font-size:16px; font-weight:500; margin:0 0 7px; line-height:1.3;}
+.xp-item .cite{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--y2025); text-transform:none; letter-spacing:0; font-weight:400;}
+.xp-quote{font-family:'Newsreader',serif; font-style:italic; font-size:15.5px; color:var(--ink); border-left:2px solid var(--hair); padding-left:15px; margin:9px 0; line-height:1.5;}
+.xp-item p{margin:7px 0 0; font-size:14px; color:var(--ink-soft); line-height:1.55;}
+.xp-item p .cite{color:var(--ink-soft);}
+.xp-stages{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--apst); margin-top:9px; letter-spacing:.01em; line-height:1.7;}
+
+/* detailed standard profile cards */
+.pstd-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+@media (max-width:760px){.pstd-grid{grid-template-columns:1fr;}}
+.pstd{background:var(--card); border:1px solid var(--hair); border-left:4px solid var(--hair); border-radius:var(--radius); padding:20px 22px; box-shadow:var(--shadow);}
+.pstd.a2017{border-left-color:var(--y2017);} .pstd.a2022{border-left-color:var(--y2022);}
+.pstd.a2025{border-left-color:var(--y2025);} .pstd.apst{border-left-color:var(--apst);}
+.pstd-head{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+.pstd-status{font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:600; padding:2px 8px; border-radius:2px; letter-spacing:.03em; margin-left:auto; text-transform:uppercase;}
+.pstd-status.in_force{background:var(--apst-soft); color:var(--apst);}
+.pstd-status.revoked,.pstd-status.superseded{background:#EFE6E5; color:#8a4b45;}
+.pstd-name{font-family:'Newsreader',serif; font-size:16px; font-weight:500; margin:8px 0 15px; line-height:1.32;}
+.pstd-metrics{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:15px;}
+.pstd-metric .v{font-family:'Newsreader',serif; font-size:21px; font-weight:500; line-height:1;}
+.pstd-metric .k{font-family:'IBM Plex Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin-top:4px; display:block;}
+.pstd-facts{border-top:1px solid var(--hair); padding-top:12px; display:flex; flex-direction:column; gap:6px;}
+.pstd-fact{display:grid; grid-template-columns:78px 1fr; gap:10px; font-size:12.5px; line-height:1.4;}
+.pstd-fact .fk{font-family:'IBM Plex Mono',monospace; font-size:9.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); padding-top:1px;}
+.pstd-structure{font-size:12px; color:var(--ink-soft); margin-top:11px; padding-top:11px; border-top:1px solid var(--hair);}
+.pstd-blurb{font-size:13px; line-height:1.5; margin-top:11px; color:var(--ink);}
+
+.docbadge{font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.03em; padding:3px 9px; border-radius:2px; color:#fff;}
+.docbadge.a2017{background:var(--y2017);} .docbadge.a2022{background:var(--y2022);}
+.docbadge.a2025{background:var(--y2025);} .docbadge.apst{background:var(--apst);}
+
+.site-notice{background:#F3ECD9; border-bottom:1px solid var(--hair);}
+.site-notice .wrap{padding:9px 30px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.02em; color:#5c4415; text-align:center; line-height:1.5;}
+@media (max-width:600px){.site-notice .wrap{padding:9px 18px;}}
+
+.pstd-scope{font-size:12.5px; line-height:1.45; color:var(--ink); margin-top:8px;}
+.pstd-lbl{font-family:'IBM Plex Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-soft); margin-right:6px;}
+.pstd-scope .pstd-lbl{color:var(--y2025);}
 </style>
 </head>
 <body>
@@ -135,12 +184,13 @@ footer{padding:34px 0 56px;}
   </div>
 </nav>
 
+<div class="site-notice"><div class="wrap">Предварительная версия сайта. Полная версия с интерактивной навигацией по всем стандартам будет доступна позже.</div></div>
 <header class="hero">
   <div class="wrap">
     <p class="hero-eyebrow">Научно-исследовательский проект · AP23489008 · 2024–2026</p>
-    <h1>Стандарт «Педагог»: реализация и <span class="em">развитие учителя</span></h1>
-    <p class="hero-sub">Проект изучает, как новый профессиональный стандарт педагога внедряется в школах Казахстана, и переводит его содержание в практические ориентиры для непрерывного профессионального развития учителей — опираясь на сравнительный анализ трёх редакций стандарта (2017 · 2022 · 2025) и международного ориентира.</p>
-    <p class="hero-official"><span class="k">Тема проекта</span>«Исследование реализации нового профессионального стандарта «Педагог» в Казахстане и детализация его содержания для непрерывного профессионального развития учителей»</p>
+    <h1>Как развивался профессиональный <span class="em">стандарт педагога</span> в Казахстане</h1>
+    <p class="hero-sub">Одно из направлений исследовательского проекта: сравнительный анализ того, как в Казахстане менялся профессиональный стандарт педагога — от отправной точки, обозначенной ОЭСР, до действующей редакции — в сопоставлении с австралийским стандартом (APST), который введён в 2011 году и с тех пор остаётся неизменным.</p>
+    <p class="hero-official"><span class="k">В рамках проекта</span>«Исследование реализации нового профессионального стандарта «Педагог» в Казахстане и детализация его содержания для непрерывного профессионального развития учителей»</p>
     <div class="project-tag">
       <span class="k">Научно-исследовательский проект · 2024–2026</span>
       <span class="v">AP23489008</span>
@@ -159,14 +209,136 @@ footer{padding:34px 0 56px;}
   </div>
 </section>
 
+<section class="block" id="definition">
+  <div class="wrap reveal">
+    <p class="eyebrow">Определение</p>
+    <h2>Что такое профессиональный стандарт педагога</h2>
+    <div class="prose">
+      <p>Профессиональный стандарт педагога (teacher professional standards, TPS) — нормативный документ, который описывает, что учитель должен знать, уметь и ценить: требования к профессиональным знаниям, умениям, действиям и этике на разных этапах карьеры.</p>
+      <p>Такие стандарты задают общий ориентир для подготовки, аттестации, оценки и непрерывного профессионального развития учителей — и во многом отражают, как государство понимает саму профессию учителя.</p>
+    </div>
+    <details class="xp">
+      <summary>Как понятие раскрывается в академической литературе</summary>
+      <div class="xp-body">
+        <div class="xp-item">
+          <h4>1. Кодифицированное представление практики <span class="cite">Wyatt-Smith &amp; Looney, 2016</span></h4>
+          <p class="xp-quote">«Профессиональные стандарты — это кодифицированное представление труда учителя».</p>
+          <p>Стандарты формально фиксируют, синтезируют и артикулируют сложную область преподавания, превращая её в видимые, общие категории знаний, педагогической практики и профессионального взаимодействия.</p>
+        </div>
+        <div class="xp-item">
+          <h4>2. Качество и системная согласованность <span class="cite">Ingvarson &amp; Rowe, 2007; Еврокомиссия, 2018</span></h4>
+          <p class="xp-quote">«Профессиональные стандарты педагога — это формальные рамки, служащие основой для общего понимания качества учителя, развития его потенциала и оценки его работы на протяжении всей карьеры».</p>
+          <p>Здесь стандарты — административно-развивающая «инфраструктура», связывающая педагогическое образование, сертификацию, непрерывное профессиональное развитие и карьерный рост.</p>
+        </div>
+        <div class="xp-item">
+          <h4>3. Две оптики: регуляторная и развивающая</h4>
+          <p><strong>Регуляторная (компетентностная).</strong> Стандарты как измеримые пороги и инструменты соответствия — минимальные требования для лицензирования, публичной подотчётности и категоризации труда. <span class="cite">Sachs, 2003; Kennedy, 2016</span></p>
+          <p><strong>Развивающая.</strong> Стандарты как формирующий «GPS» или континуум — общий профессиональный язык и «дорожная карта» для рефлексивной практики, непрерывного обучения и профессиональной субъектности. <span class="cite">Darling-Hammond, 2017; Avalos, 2011</span></p>
+        </div>
+        <div class="xp-item">
+          <h4>4. Социологическая и этическая перспектива <span class="cite">Sockett, 1993</span></h4>
+          <p class="xp-quote">«Профессионализм — это способ поведения внутри профессии: то, как её представители соединяют свои обязательства со знанием и мастерством в условиях коллегиальности, а также их договорные и этические отношения с теми, кому служат».</p>
+          <p>Помимо технических навыков, стандарты воплощают моральные, этические и отношенческие обязательства педагога перед учениками и обществом (Sockett, Biesta).</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
 <section class="block" id="about">
   <div class="wrap reveal">
-    <p class="eyebrow">О проекте</p>
-    <h2>От нового стандарта — к развитию учителя</h2>
+    <p class="eyebrow">О направлении</p>
+    <h2>Одно из направлений исследования</h2>
     <div class="prose">
-      <p>Проект сопровождает внедрение нового профессионального стандарта педагога (Приказ №&nbsp;31, 2025) в Казахстане и детализирует его содержание для непрерывного профессионального развития учителей.</p>
-      <p>Чтобы понять, что именно изменилось и как выстроить поддержку учителей, стандарт 2025 года рассматривается в развитии — вместе с предыдущими редакциями 2017 и 2022 годов — и сопоставляется с <strong>Австралийскими профессиональными стандартами для учителей (APST)</strong>, устойчивым международным ориентиром, действующим с 2011 года.</p>
-      <p>Отправной точкой исследования стал <strong>Обзор ОЭСР школьных ресурсов: Казахстан (2015)</strong>.</p>
+      <p>Это направление исследовательского проекта посвящено тому, как в Казахстане развивался профессиональный стандарт педагога.</p>
+      <p>Отправной точкой стал <strong>Обзор ОЭСР школьных ресурсов: Казахстан (2015)</strong>: в нём действовавшие тогда стандарты были охарактеризованы как преимущественно нормативные, а не развивающие, и в качестве образца приводился австралийский подход.</p>
+      <p>Контраст показателен. <strong>Австралийские профессиональные стандарты для учителей (APST)</strong> введены в 2011 году и с тех пор остаются неизменными. За тот же период Казахстан пересматривал свой стандарт четыре раза — что и делает эволюцию казахстанского стандарта особенно интересным предметом для анализа и синтеза.</p>
+    </div>
+    <details class="xp">
+      <summary>Подробнее об Обзоре ОЭСР (2015)</summary>
+      <div class="xp-body">
+        <div class="xp-item">
+          <p>В этом обзоре ОЭСР официально зафиксировала, что действовавшая в Казахстане система аттестации учителей была чрезмерно бюрократизированной и привязанной к тарифным разрядам оплаты труда, а не к профессиональному росту.</p>
+        </div>
+        <div class="xp-item">
+          <h4>Глава 4. «Аттестация учителей и профессиональный рост»</h4>
+          <p>ОЭСР привела международные примеры рамок карьерного континуума и указала на австралийскую многоуровневую систему под управлением AITSL как на эталон модели непрерывного, ненаказательного профессионального роста.</p>
+          <p class="xp-stages">Graduate (выпускник) → Proficient (квалифицированный) → Highly Accomplished (высококвалифицированный) → Lead (ведущий)</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="block" id="standards">
+  <div class="wrap reveal">
+    <p class="eyebrow">Рассматриваемые документы</p>
+    <h2>Четыре стандарта</h2>
+    <div class="pstd-grid">
+      <div class="pstd a2017">
+        <div class="pstd-head"><span class="docbadge a2017">КАЗ 2017</span><span class="pstd-status superseded">заменён</span></div>
+        <div class="pstd-name">Профессиональный стандарт «Педагог»</div>
+        <div class="pstd-metrics">
+          <div class="pstd-metric"><span class="v">2017</span><span class="k">год</span></div>
+          <div class="pstd-metric"><span class="v">148</span><span class="k">дескрипторов</span></div>
+          <div class="pstd-metric"><span class="v">1 818</span><span class="k">слов</span></div>
+        </div>
+        <div class="pstd-facts">
+          <div class="pstd-fact"><span class="fk">Приказ</span><span>№133</span></div>
+          <div class="pstd-fact"><span class="fk">Издатель</span><span>Национальная палата предпринимателей РК «Атамекен»</span></div>
+        </div>
+        <div class="pstd-structure"><span class="pstd-lbl">Документ</span>7 карточек профессий (ОРК 4–8): от воспитателя дошкольной организации до менеджера в образовании</div>
+        <div class="pstd-scope"><span class="pstd-lbl">В анализе</span>«Учитель средней школы» и «Преподаватель колледжа»</div>
+        <div class="pstd-blurb">Первый профессиональный стандарт педагога в Казахстане. Утверждён Национальной палатой предпринимателей «Атамекен». Охватывает семь педагогических профессий на уровнях ОРК 4–8.</div>
+      </div>
+      <div class="pstd a2022">
+        <div class="pstd-head"><span class="docbadge a2022">КАЗ 2022</span><span class="pstd-status revoked">отменён</span></div>
+        <div class="pstd-name">Профессиональный стандарт «Педагог»</div>
+        <div class="pstd-metrics">
+          <div class="pstd-metric"><span class="v">2022</span><span class="k">год</span></div>
+          <div class="pstd-metric"><span class="v">45</span><span class="k">дескрипторов</span></div>
+          <div class="pstd-metric"><span class="v">542</span><span class="k">слов</span></div>
+        </div>
+        <div class="pstd-facts">
+          <div class="pstd-fact"><span class="fk">Приказ</span><span>№500</span></div>
+          <div class="pstd-fact"><span class="fk">Издатель</span><span>Министерство образования и науки РК</span></div>
+        </div>
+        <div class="pstd-structure"><span class="pstd-lbl">Документ</span>Рамка компетенций и карточки профессий; охватывает все уровни образования, кроме высшего</div>
+        <div class="pstd-scope"><span class="pstd-lbl">В анализе</span>критерии по 9 показателям × 5 карьерных категорий (приложение 2)</div>
+        <div class="pstd-blurb">Второй стандарт. Вводит единую рамку компетенций и критерии по квалификационным категориям. Действовал до 2025 года.</div>
+      </div>
+      <div class="pstd a2025">
+        <div class="pstd-head"><span class="docbadge a2025">КАЗ 2025</span><span class="pstd-status in_force">действует</span></div>
+        <div class="pstd-name">Профессиональные стандарты для педагогов организаций образования</div>
+        <div class="pstd-metrics">
+          <div class="pstd-metric"><span class="v">2025</span><span class="k">год</span></div>
+          <div class="pstd-metric"><span class="v">185</span><span class="k">дескрипторов</span></div>
+          <div class="pstd-metric"><span class="v">1 785</span><span class="k">слов</span></div>
+        </div>
+        <div class="pstd-facts">
+          <div class="pstd-fact"><span class="fk">Приказ</span><span>№31</span></div>
+          <div class="pstd-fact"><span class="fk">Издатель</span><span>Министерство просвещения РК</span></div>
+        </div>
+        <div class="pstd-structure"><span class="pstd-lbl">Документ</span>42 карточки профессий · 17 семейств (ОРК 4–7)</div>
+        <div class="pstd-scope"><span class="pstd-lbl">В анализе</span>карточки «Учитель средней школы»</div>
+        <div class="pstd-blurb">Действующий стандарт. Содержание изложено как перечни трудовых функций и умений по уровням Национальной рамки квалификаций.</div>
+      </div>
+      <div class="pstd apst">
+        <div class="pstd-head"><span class="docbadge apst">APST</span><span class="pstd-status in_force">действует</span></div>
+        <div class="pstd-name">Australian Professional Standards for Teachers</div>
+        <div class="pstd-metrics">
+          <div class="pstd-metric"><span class="v">2011</span><span class="k">год</span></div>
+          <div class="pstd-metric"><span class="v">148</span><span class="k">дескрипторов</span></div>
+          <div class="pstd-metric"><span class="v">2 859</span><span class="k">слов</span></div>
+        </div>
+        <div class="pstd-facts">
+          <div class="pstd-fact"><span class="fk">Приказ</span><span>—</span></div>
+          <div class="pstd-fact"><span class="fk">Издатель</span><span>AITSL (Австралия)</span></div>
+        </div>
+        <div class="pstd-structure"><span class="pstd-lbl">Документ</span>3 домена → 7 стандартов → 37 фокус-областей × 4 стадии</div>
+        <div class="pstd-scope"><span class="pstd-lbl">В анализе</span>весь стандарт</div>
+        <div class="pstd-blurb">Единый стандарт для всей профессии, действующий без изменений с 2011 года. Служит международным ориентиром в исследовании.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -207,8 +379,8 @@ footer{padding:34px 0 56px;}
     <p class="eyebrow">К чему это ведёт</p>
     <h2>Результаты проекта</h2>
     <div class="out-grid">
-      <div class="out"><span class="tag">Готовится</span><h3>Научная статья</h3><p>Статья о методологии (компьютерный анализ с участием человека) и результатах — готовится к публикации в международном рецензируемом журнале.</p></div>
-      <div class="out"><span class="tag">В разработке</span><h3>Содержание для профессионального развития</h3><p>Детализация профессионального стандарта «Педагог» в материалы и ориентиры для непрерывного профессионального развития учителей.</p></div>
+      <div class="out"><span class="tag">Готовится</span><h3>Анализ, конференции и публикация</h3><p>Собранная база данных легла в основу анализа и синтеза; их результаты будут представлены на научных конференциях и в рецензируемой публикации.</p></div>
+      <div class="out"><span class="tag">Следующий шаг</span><h3>Теоретическая основа для будущих стандартов</h3><p>На основе полученных результатов готовится теоретическая база для следующего поколения профессиональных стандартов — с учётом глобальных и локальных изменений. Она может быть востребована в Казахстане и других странах Центральной Азии и за её пределами.</p></div>
     </div>
   </div>
 </section>
@@ -218,7 +390,7 @@ footer{padding:34px 0 56px;}
     <p class="eyebrow">Доказательная база</p>
     <h2>Корпус данных</h2>
     <div class="corpus-box">
-      <p>В основе проекта — структурированная, проверенная по источнику база данных всех дескрипторов четырёх стандартов с постатейным навигатором. Полный интерактивный навигатор будет открыт вместе с научной публикацией; сейчас он доступен участникам проекта.</p>
+      <p>Для анализа и синтеза собрана структурированная, проверенная по источнику база данных всех дескрипторов рассматриваемых стандартов с постатейным навигатором. Полный интерактивный навигатор будет открыт вместе с научной публикацией; сейчас он доступен участникам проекта.</p>
       <button class="btn-locked" disabled>Навигатор корпуса — откроется с публикацией</button>
     </div>
   </div>
